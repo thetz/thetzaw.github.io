@@ -1,0 +1,140 @@
+* {
+	box-sizing: border-box;
+}
+
+html, body {
+	margin: 0;
+	width: 100%;
+	height: 100%;
+	cursor: url('images/pin3.png'), auto;
+}
+
+@keyframes twinkleAni {
+    from {background-position: 0 0;}
+    to {background-position: -10000px 5000px;}
+}
+
+.stars, .twinkle {
+	position: absolute;
+	float: left;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	width: 100%;
+	height: 100%;
+	display: block;
+}
+
+.stars {
+	background: #000 url("http://www.script-tutorials.com/demos/360/images/stars.png") repeat top center;
+	z-index: 1;
+}
+
+.twinkle {
+  background: transparent url("images/twinkle.png") repeat top center;
+  z-index: 2;
+  animation: twinkleAni 650s linear infinite;
+}
+
+.earth {
+	position: absolute;
+	z-index: 3;
+	float: left;
+	width: 100%;
+	height: 100%;
+	margin-top: -0.2%;
+	margin-left: 0%;
+}
+
+.title {
+	position: absolute;
+	z-index: 4;
+	float: left;
+	margin-top: 2%;
+	margin-left: 3%;
+	width: 30%;
+	height: 0%;
+	background-color: red;
+}
+
+.title p {
+	text-align: center;
+	margin-top: 4%;
+	color: white;
+	text-shadow: 2px 2px 2px #0d4bc8;
+	font-family: 'Black Han Sans', sans-serif;
+	font-size: 200%;
+	animation-name: smoothin;
+	animation-duration: 2s;
+}
+
+.title p:hover {
+	color: #CACACA;
+}
+
+@keyframes smoothin {
+	0% { font-size: 0%; }
+	100% { font-size: 200%; }
+}
+
+.moon {
+	position: absolute;
+	z-index: 5;
+	float: right;
+	margin-left: 90%;
+}
+
+.clockspot {
+	position: absolute;
+	z-index: 6;
+	float: left;
+	margin-top: 18%;
+	margin-left: 30%;
+	border: 2px solid gold;
+	border-radius: 25%;
+	width: 40%;
+	height: 25%;
+	background-color: #08296A;
+	box-shadow: 0px 0px 50px black;
+}
+
+.clockspot span {
+	float: left;
+	margin-top: 7%;
+	font-family: 'Gugi', cursive;
+	font-size: 600%;
+	color: white;
+	text-shadow: 5px 2px black;
+}
+
+#hours_html {
+	float: left;
+	margin-left: 14%;
+	color: #397BFF;
+}
+
+#minutes_html {
+	color: #4EC220
+}
+
+#ampm_html{
+	margin-left: 5%;
+	margin-top: 12%;
+	font-size: 300%;
+}
+
+.groupname {
+	position: absolute;
+	z-index: 7;
+	float: left;
+	margin-top: 44%;
+	margin-left: 48%;
+}
+
+.groupname p {
+	font-family: 'Black Han Sans', sans-serif;
+	color: green;
+	font-size: 150%;
+	font-weight: bold;
+}
